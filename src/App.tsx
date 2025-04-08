@@ -1,0 +1,303 @@
+import React, { useState } from 'react';
+import { Volume2, Info, Github, Mail, Users } from 'lucide-react';
+
+interface ComicFrame {
+  id: number;
+  image: string;
+  audio: string;
+}
+
+interface TeamMember {
+  name: string;
+  role: string;
+  email: string;
+  github: string;
+  telegram: string;
+}
+
+const teamMembers: TeamMember[] = [
+  {
+    name: "Анна Ковальчук",
+    role: "Керівник проєкту",
+    email: "anna@example.com",
+    github: "https://github.com",
+    telegram: "https://t.me/username"
+  },
+  {
+    name: "Михайло Петренко",
+    role: "Художник",
+    email: "mykhailo@example.com",
+    github: "https://github.com",
+    telegram: "https://t.me/username"
+  },
+  {
+    name: "Олена Мельник",
+    role: "Розробник",
+    email: "olena@example.com",
+    github: "https://github.com",
+    telegram: "https://t.me/username"
+  },
+  {
+    name: "Іван Шевченко",
+    role: "Дизайнер",
+    email: "ivan@example.com",
+    github: "https://github.com",
+    telegram: "https://t.me/username"
+  }
+];
+
+const comicFrames: ComicFrame[] = [
+  {
+    id: 1,
+    image: "https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&q=80&w=600&h=600",
+    audio: "https://assets.mixkit.co/active_storage/sfx/2568/2568.wav"
+  },
+  {
+    id: 2,
+    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=600&h=600",
+    audio: "https://assets.mixkit.co/active_storage/sfx/2569/2569.wav"
+  },
+  {
+    id: 3,
+    image: "https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&q=80&w=600&h=600",
+    audio: "https://assets.mixkit.co/active_storage/sfx/2570/2570.wav"
+  },
+  {
+    id: 4,
+    image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&q=80&w=600&h=600",
+    audio: "https://assets.mixkit.co/active_storage/sfx/2571/2571.wav"
+  },
+  {
+    id: 5,
+    image: "https://images.unsplash.com/photo-1535378719329-f0a8b9a42152?auto=format&fit=crop&q=80&w=600&h=600",
+    audio: "https://assets.mixkit.co/active_storage/sfx/2572/2572.wav"
+  },
+  {
+    id: 6,
+    image: "https://images.unsplash.com/photo-1534723328310-e82dad3ee43f?auto=format&fit=crop&q=80&w=600&h=600",
+    audio: "https://assets.mixkit.co/active_storage/sfx/2573/2573.wav"
+  },
+  {
+    id: 7,
+    image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=80&w=600&h=600",
+    audio: "https://assets.mixkit.co/active_storage/sfx/2574/2574.wav"
+  },
+  {
+    id: 8,
+    image: "https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&q=80&w=600&h=600",
+    audio: "https://assets.mixkit.co/active_storage/sfx/2575/2575.wav"
+  },
+];
+
+function App() {
+  const [activeAudio, setActiveAudio] = useState<HTMLAudioElement | null>(null);
+  const [showTooltip, setShowTooltip] = useState(true);
+
+  const handleFrameClick = (frame: ComicFrame) => {
+    if (activeAudio) {
+      activeAudio.pause();
+      activeAudio.currentTime = 0;
+    }
+    
+    const audio = new Audio(frame.audio);
+    audio.play();
+    setActiveAudio(audio);
+    setShowTooltip(false);
+  };
+
+  return (
+    <div className="min-h-screen bg-[#1a1a2e] text-white">
+      {/* Logo Section */}
+      <div className="bg-gradient-to-b from-[#4a00e0]/20 to-transparent py-8">
+        <div className="max-w-7xl mx-auto px-4 flex items-center justify-center">
+          <div className="w-20 h-20 bg-gradient-to-br from-[#4a00e0] to-[#8e2de2] rounded-full flex items-center justify-center">
+            <Users className="w-10 h-10" />
+          </div>
+        </div>
+      </div>
+
+      {/* Header */}
+      <header className="max-w-4xl mx-auto text-center py-8 px-4">
+        <h1 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#4a00e0] to-[#8e2de2]">
+          Штучний інтелект: помічник чи заміна?
+        </h1>
+        <p className="text-[#8e2de2] text-lg">
+          Інтерактивний комікс про майбутнє взаємодії людини та ШІ
+        </p>
+      </header>
+
+      {/* Tooltip */}
+      {showTooltip && (
+        <div className="fixed top-4 right-4 bg-[#4a00e0] text-white p-4 rounded-lg shadow-lg animate-bounce flex items-center gap-2 z-50">
+          <Volume2 className="w-5 h-5" />
+          <span>Натисни на кадр, щоб почути озвучку!</span>
+        </div>
+      )}
+
+      {/* Comic Grid - Marvel Style */}
+      <div className="max-w-4xl mx-auto px-4 mb-20">
+        <div className="grid grid-cols-12 gap-2">
+          {/* Row 1 */}
+          <div className="col-span-4">
+            <div 
+              className="relative group cursor-pointer transform transition-all duration-300 hover:scale-105 hover:z-10 hover:rotate-1"
+              onClick={() => handleFrameClick(comicFrames[0])}
+            >
+              <img 
+                src={comicFrames[0].image} 
+                alt="Frame 1" 
+                className="w-full aspect-square rounded-lg shadow-lg border-2 border-[#4a00e0]/20"
+              />
+              <div className="absolute bottom-2 right-2 bg-[#4a00e0] p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <Volume2 className="w-4 h-4" />
+              </div>
+            </div>
+          </div>
+          <div className="col-span-4">
+            <div 
+              className="relative group cursor-pointer transform transition-all duration-300 hover:scale-105 hover:z-10 hover:-rotate-1"
+              onClick={() => handleFrameClick(comicFrames[1])}
+            >
+              <img 
+                src={comicFrames[1].image} 
+                alt="Frame 2" 
+                className="w-full aspect-square rounded-lg shadow-lg border-2 border-[#4a00e0]/20"
+              />
+              <div className="absolute bottom-2 right-2 bg-[#4a00e0] p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <Volume2 className="w-4 h-4" />
+              </div>
+            </div>
+          </div>
+          <div className="col-span-4">
+            <div 
+              className="relative group cursor-pointer transform transition-all duration-300 hover:scale-105 hover:z-10 hover:rotate-1"
+              onClick={() => handleFrameClick(comicFrames[2])}
+            >
+              <img 
+                src={comicFrames[2].image} 
+                alt="Frame 3" 
+                className="w-full aspect-square rounded-lg shadow-lg border-2 border-[#4a00e0]/20"
+              />
+              <div className="absolute bottom-2 right-2 bg-[#4a00e0] p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <Volume2 className="w-4 h-4" />
+              </div>
+            </div>
+          </div>
+
+          {/* Row 2 */}
+          <div className="col-span-6">
+            <div 
+              className="relative group cursor-pointer transform transition-all duration-300 hover:scale-105 hover:z-10 hover:-rotate-1"
+              onClick={() => handleFrameClick(comicFrames[3])}
+            >
+              <img 
+                src={comicFrames[3].image} 
+                alt="Frame 4" 
+                className="w-full aspect-square rounded-lg shadow-lg border-2 border-[#4a00e0]/20"
+              />
+              <div className="absolute bottom-2 right-2 bg-[#4a00e0] p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <Volume2 className="w-4 h-4" />
+              </div>
+            </div>
+          </div>
+          <div className="col-span-6">
+            <div 
+              className="relative group cursor-pointer transform transition-all duration-300 hover:scale-105 hover:z-10 hover:rotate-1"
+              onClick={() => handleFrameClick(comicFrames[4])}
+            >
+              <img 
+                src={comicFrames[4].image} 
+                alt="Frame 5" 
+                className="w-full aspect-square rounded-lg shadow-lg border-2 border-[#4a00e0]/20"
+              />
+              <div className="absolute bottom-2 right-2 bg-[#4a00e0] p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <Volume2 className="w-4 h-4" />
+              </div>
+            </div>
+          </div>
+
+          {/* Row 3 */}
+          <div className="col-span-6">
+            <div 
+              className="relative group cursor-pointer transform transition-all duration-300 hover:scale-105 hover:z-10 hover:-rotate-1"
+              onClick={() => handleFrameClick(comicFrames[5])}
+            >
+              <img 
+                src={comicFrames[5].image} 
+                alt="Frame 6" 
+                className="w-full aspect-square rounded-lg shadow-lg border-2 border-[#4a00e0]/20"
+              />
+              <div className="absolute bottom-2 right-2 bg-[#4a00e0] p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <Volume2 className="w-4 h-4" />
+              </div>
+            </div>
+          </div>
+          <div className="col-span-6">
+            <div 
+              className="relative group cursor-pointer transform transition-all duration-300 hover:scale-105 hover:z-10 hover:rotate-1"
+              onClick={() => handleFrameClick(comicFrames[6])}
+            >
+              <img 
+                src={comicFrames[6].image} 
+                alt="Frame 7" 
+                className="w-full aspect-square rounded-lg shadow-lg border-2 border-[#4a00e0]/20"
+              />
+              <div className="absolute bottom-2 right-2 bg-[#4a00e0] p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <Volume2 className="w-4 h-4" />
+              </div>
+            </div>
+          </div>
+
+          {/* Row 4 */}
+          <div className="col-span-12">
+            <div 
+              className="relative group cursor-pointer transform transition-all duration-300 hover:scale-105 hover:z-10 hover:-rotate-1"
+              onClick={() => handleFrameClick(comicFrames[7])}
+            >
+              <img 
+                src={comicFrames[7].image} 
+                alt="Frame 8" 
+                className="w-full aspect-[2/1] object-cover rounded-lg shadow-lg border-2 border-[#4a00e0]/20"
+              />
+              <div className="absolute bottom-2 right-2 bg-[#4a00e0] p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <Volume2 className="w-4 h-4" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Team Section */}
+      <div className="bg-[#16162a] py-16">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-[#4a00e0] to-[#8e2de2]">
+            Наша Команда
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {teamMembers.map((member, index) => (
+              <div key={index} className="bg-[#1a1a2e] rounded-xl p-6 transform transition-all duration-300 hover:scale-105 hover:-translate-y-2 border border-[#4a00e0]/20">
+                <div className="text-center mb-4">
+                  <h3 className="text-xl font-semibold text-white mb-1">{member.name}</h3>
+                  <p className="text-[#8e2de2]">{member.role}</p>
+                </div>
+                <div className="flex justify-center space-x-4">
+                  <a href={`mailto:${member.email}`} className="text-gray-400 hover:text-[#8e2de2] transition-colors">
+                    <Mail className="w-5 h-5" />
+                  </a>
+                  <a href={member.github} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#8e2de2] transition-colors">
+                    <Github className="w-5 h-5" />
+                  </a>
+                  <a href={member.telegram} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#8e2de2] transition-colors">
+                    <span className="font-bold">t</span>
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default App;
