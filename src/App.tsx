@@ -79,7 +79,7 @@ const comicFrames: ComicFrame[] = [
   },
   {
     id: 7,
-    image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=80&w=600&h=600",
+    image: "https://res.cloudinary.com/dk3syrsg5/image/upload/v1744183578/ChatGPT_Image_9_%D0%BA%D0%B2%D1%96%D1%82._2025_%D1%80._10_25_40_j5hfb8.png",
     audio: "https://res.cloudinary.com/dk3syrsg5/video/upload/v1744182911/frame7_uqv1yg.mp3"
   },
   {
