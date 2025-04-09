@@ -32,7 +32,7 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: "Крамар Олег",
-    role: "Просто алег",
+    role: "Просто АЛЄГ",
     email: "olena@example.com",
     github: "https://github.com/olegoleg0080",
     telegram: "https://t.me/MamkinDevOps"
