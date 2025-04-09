@@ -50,42 +50,42 @@ const comicFrames: ComicFrame[] = [
   {
     id: 1,
     image: "https://res.cloudinary.com/dk3syrsg5/image/upload/v1744182062/frame1_k03sdv.jpg",
-    audio: "./audio/frame1.mp3"
+    audio: "https://res.cloudinary.com/dk3syrsg5/video/upload/v1744182914/frame1_stbcg7.mp3"
   },
   {
     id: 2,
-    image: "./media/frame2.jpg",
-    audio: "./audio/frame2.mp3"
+    image: "https://res.cloudinary.com/dk3syrsg5/image/upload/v1744182058/frame2_ouzto3.jpg",
+    audio: "https://res.cloudinary.com/dk3syrsg5/video/upload/v1744182913/frame2_qdugmi.mp3"
   },
   {
     id: 3,
-    image: "./media/frame3.jpg",
-    audio: "./audio/frame3.mp3"
+    image: "https://res.cloudinary.com/dk3syrsg5/image/upload/v1744182581/photo_2025-04-09_10-09-05_spiyco.jpg",
+    audio: "https://res.cloudinary.com/dk3syrsg5/video/upload/v1744182912/frame3_zixkw4.mp3"
   },
   {
     id: 4,
-    image: "./media/frame4.png",
-    audio: "./audio/frame4.mp3"
+    image: "https://res.cloudinary.com/dk3syrsg5/image/upload/v1744182058/frame4_kuuxdb.png",
+    audio: "https://res.cloudinary.com/dk3syrsg5/video/upload/v1744182912/frame4_regctw.mp3"
   },
   {
     id: 5,
-    image: "./media/frame5.jpg",
-    audio: "./audio/frame5.mp3"
+    image: "https://res.cloudinary.com/dk3syrsg5/image/upload/v1744182061/frame5_ne0h3x.jpg",
+    audio: "https://res.cloudinary.com/dk3syrsg5/video/upload/v1744182912/frame5_ubsxdj.mp3"
   },
   {
     id: 6,
-    image: "./media/frame6.jpg",
-    audio: "./audio/frame6.mp3"
+    image: "https://res.cloudinary.com/dk3syrsg5/image/upload/v1744182057/frame6_oneixx.jpg",
+    audio: "https://res.cloudinary.com/dk3syrsg5/video/upload/v1744182911/frame6_atskmn.mp3"
   },
   {
     id: 7,
     image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=80&w=600&h=600",
-    audio: "./audio/frame7.mp3"
+    audio: "https://res.cloudinary.com/dk3syrsg5/video/upload/v1744182911/frame7_uqv1yg.mp3"
   },
   {
     id: 8,
     image: "https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&q=80&w=600&h=600",
-    audio: "./audio/frame8.mp3"
+    audio: "https://res.cloudinary.com/dk3syrsg5/video/upload/v1744182910/frame8_fppacb.mp3"
   },
 ];
 
@@ -111,7 +111,7 @@ function App() {
       <div className="bg-gradient-to-b from-[#4a00e0]/20 to-transparent py-8">
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-center">
           <div className="w-40 h-40 bg-gradient-to-br from-[#4a00e0] to-[#8e2de2] rounded-full flex items-center justify-center">
-            <img className='rounded-full' src="./media/logo.jpg" alt="" />
+            <img className='rounded-full' src="https://res.cloudinary.com/dk3syrsg5/image/upload/v1744182056/logo_uxl2co.jpg" alt="" />
           </div>
         </div>
       </div>
