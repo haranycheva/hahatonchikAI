@@ -21,9 +21,9 @@ async function generateAudioFromText(text, filename = "output.mp3") {
     const filePath = path.join(audioDir, filename);
     fs.writeFileSync(filePath, buffer);
 
-    console.log(`Аудіо збережено у: ${filePath}`);
+    console.log(`${filePath}`);
   } catch (err) {
-    console.error(" Помилка генерації аудіо:", err);
+    console.error(err);
   }
 }
 

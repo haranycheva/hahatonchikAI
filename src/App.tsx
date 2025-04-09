@@ -84,7 +84,7 @@ const comicFrames: ComicFrame[] = [
   },
   {
     id: 8,
-    image: "https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&q=80&w=600&h=600",
+    image: "https://res.cloudinary.com/dk3syrsg5/image/upload/v1744183969/image_2025-04-09_10-30-39_gwulrw.png",
     audio: "https://res.cloudinary.com/dk3syrsg5/video/upload/v1744182910/frame8_fppacb.mp3"
   },
 ];
