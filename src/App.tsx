@@ -49,7 +49,7 @@ const teamMembers: TeamMember[] = [
 const comicFrames: ComicFrame[] = [
   {
     id: 1,
-    image: "./media/frame1.jpg",
+    image: "https://res.cloudinary.com/dk3syrsg5/image/upload/v1744182062/frame1_k03sdv.jpg",
     audio: "./audio/frame1.mp3"
   },
   {
