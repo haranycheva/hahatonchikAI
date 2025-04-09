@@ -49,32 +49,32 @@ const teamMembers: TeamMember[] = [
 const comicFrames: ComicFrame[] = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&q=80&w=600&h=600",
+    image: "./media/frame1.jpg",
     audio: "./audio/frame1.mp3"
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=600&h=600",
+    image: "./media/frame2.jpg",
     audio: "./audio/frame2.mp3"
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&q=80&w=600&h=600",
+    image: "./media/frame3.jpg",
     audio: "./audio/frame3.mp3"
   },
   {
     id: 4,
-    image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&q=80&w=600&h=600",
+    image: "./media/frame4.png",
     audio: "./audio/frame4.mp3"
   },
   {
     id: 5,
-    image: "https://images.unsplash.com/photo-1535378719329-f0a8b9a42152?auto=format&fit=crop&q=80&w=600&h=600",
+    image: "./media/frame5.jpg",
     audio: "./audio/frame5.mp3"
   },
   {
     id: 6,
-    image: "https://images.unsplash.com/photo-1534723328310-e82dad3ee43f?auto=format&fit=crop&q=80&w=600&h=600",
+    image: "./media/frame6.jpg",
     audio: "./audio/frame6.mp3"
   },
   {
@@ -106,12 +106,12 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#1a1a2e] text-white">
+    <div className="min-h-screen bg-[#8b8b9e] text-white">
       {/* Logo Section */}
       <div className="bg-gradient-to-b from-[#4a00e0]/20 to-transparent py-8">
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-center">
-          <div className="w-20 h-20 bg-gradient-to-br from-[#4a00e0] to-[#8e2de2] rounded-full flex items-center justify-center">
-            <Users className="w-10 h-10" />
+          <div className="w-40 h-40 bg-gradient-to-br from-[#4a00e0] to-[#8e2de2] rounded-full flex items-center justify-center">
+            <img className='rounded-full' src="./media/logo.jpg" alt="" />
           </div>
         </div>
       </div>
@@ -122,7 +122,7 @@ function App() {
           Штучний інтелект: помічник чи заміна?
         </h1>
         <p className="text-[#8e2de2] text-lg">
-          Інтерактивний комікс про майбутнє взаємодії людини та ШІ
+          Інтерактивний комікс про взаємодії людини та ШІ
         </p>
       </header>
 
