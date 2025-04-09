@@ -106,11 +106,11 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#8b8b9e] text-white">
+    <div className="min-h-screen bg-[#f5e6d3] text-[#2c1810]">
       {/* Logo Section */}
-      <div className="bg-gradient-to-b from-[#4a00e0]/20 to-transparent py-8">
+      <div className="bg-gradient-to-b from-[#d4a373]/20 to-transparent py-8">
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-center">
-          <div className="w-40 h-40 bg-gradient-to-br from-[#4a00e0] to-[#8e2de2] rounded-full flex items-center justify-center">
+          <div className="w-40 h-40 bg-gradient-to-br from-[#d4a373] to-[#e9edc9] rounded-full flex items-center justify-center">
             <img className='rounded-full' src="https://res.cloudinary.com/dk3syrsg5/image/upload/v1744182056/logo_uxl2co.jpg" alt="" />
           </div>
         </div>
@@ -118,17 +118,17 @@ function App() {
 
       {/* Header */}
       <header className="max-w-4xl mx-auto text-center py-8 px-4">
-        <h1 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#4a00e0] to-[#8e2de2]">
+        <h1 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#d4a373] to-[#a98467]">
           Штучний інтелект: помічник чи заміна?
         </h1>
-        <p className="text-[#8e2de2] text-lg">
+        <p className="text-[#a98467] text-lg">
           Інтерактивний комікс про взаємодії людини та ШІ
         </p>
       </header>
 
       {/* Tooltip */}
       {showTooltip && (
-        <div className="fixed top-4 right-4 bg-[#4a00e0] text-white p-4 rounded-lg shadow-lg animate-bounce flex items-center gap-2 z-50">
+        <div className="fixed top-4 right-4 bg-[#d4a373] text-white p-4 rounded-lg shadow-lg animate-bounce flex items-center gap-2 z-50">
           <Volume2 className="w-5 h-5" />
           <span>Натисни на кадр, щоб почути озвучку!</span>
         </div>
@@ -146,10 +146,10 @@ function App() {
               <img 
                 src={comicFrames[0].image} 
                 alt="Frame 1" 
-                className="w-full aspect-square rounded-lg shadow-lg border-2 border-[#4a00e0]/20"
+                className="w-full aspect-square rounded-lg shadow-lg border-2 border-[#d4a373]/20"
               />
-              <div className="absolute bottom-2 right-2 bg-[#4a00e0] p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <Volume2 className="w-4 h-4" />
+              <div className="absolute bottom-2 right-2 bg-[#d4a373] p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <Volume2 className="w-4 h-4 text-white" />
               </div>
             </div>
           </div>
@@ -161,10 +161,10 @@ function App() {
               <img 
                 src={comicFrames[1].image} 
                 alt="Frame 2" 
-                className="w-full aspect-square rounded-lg shadow-lg border-2 border-[#4a00e0]/20"
+                className="w-full aspect-square rounded-lg shadow-lg border-2 border-[#d4a373]/20"
               />
-              <div className="absolute bottom-2 right-2 bg-[#4a00e0] p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <Volume2 className="w-4 h-4" />
+              <div className="absolute bottom-2 right-2 bg-[#d4a373] p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <Volume2 className="w-4 h-4 text-white" />
               </div>
             </div>
           </div>
@@ -176,10 +176,10 @@ function App() {
               <img 
                 src={comicFrames[2].image} 
                 alt="Frame 3" 
-                className="w-full aspect-square rounded-lg shadow-lg border-2 border-[#4a00e0]/20"
+                className="w-full aspect-square rounded-lg shadow-lg border-2 border-[#d4a373]/20"
               />
-              <div className="absolute bottom-2 right-2 bg-[#4a00e0] p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <Volume2 className="w-4 h-4" />
+              <div className="absolute bottom-2 right-2 bg-[#d4a373] p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <Volume2 className="w-4 h-4 text-white" />
               </div>
             </div>
           </div>
@@ -193,10 +193,10 @@ function App() {
               <img 
                 src={comicFrames[3].image} 
                 alt="Frame 4" 
-                className="w-full aspect-square rounded-lg shadow-lg border-2 border-[#4a00e0]/20"
+                className="w-full aspect-square rounded-lg shadow-lg border-2 border-[#d4a373]/20"
               />
-              <div className="absolute bottom-2 right-2 bg-[#4a00e0] p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <Volume2 className="w-4 h-4" />
+              <div className="absolute bottom-2 right-2 bg-[#d4a373] p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <Volume2 className="w-4 h-4 text-white" />
               </div>
             </div>
           </div>
@@ -208,10 +208,10 @@ function App() {
               <img 
                 src={comicFrames[4].image} 
                 alt="Frame 5" 
-                className="w-full aspect-square rounded-lg shadow-lg border-2 border-[#4a00e0]/20"
+                className="w-full aspect-square rounded-lg shadow-lg border-2 border-[#d4a373]/20"
               />
-              <div className="absolute bottom-2 right-2 bg-[#4a00e0] p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <Volume2 className="w-4 h-4" />
+              <div className="absolute bottom-2 right-2 bg-[#d4a373] p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <Volume2 className="w-4 h-4 text-white" />
               </div>
             </div>
           </div>
@@ -225,10 +225,10 @@ function App() {
               <img 
                 src={comicFrames[5].image} 
                 alt="Frame 6" 
-                className="w-full aspect-square rounded-lg shadow-lg border-2 border-[#4a00e0]/20"
+                className="w-full aspect-square rounded-lg shadow-lg border-2 border-[#d4a373]/20"
               />
-              <div className="absolute bottom-2 right-2 bg-[#4a00e0] p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <Volume2 className="w-4 h-4" />
+              <div className="absolute bottom-2 right-2 bg-[#d4a373] p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <Volume2 className="w-4 h-4 text-white" />
               </div>
             </div>
           </div>
@@ -240,10 +240,10 @@ function App() {
               <img 
                 src={comicFrames[6].image} 
                 alt="Frame 7" 
-                className="w-full aspect-square rounded-lg shadow-lg border-2 border-[#4a00e0]/20"
+                className="w-full aspect-square rounded-lg shadow-lg border-2 border-[#d4a373]/20"
               />
-              <div className="absolute bottom-2 right-2 bg-[#4a00e0] p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <Volume2 className="w-4 h-4" />
+              <div className="absolute bottom-2 right-2 bg-[#d4a373] p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <Volume2 className="w-4 h-4 text-white" />
               </div>
             </div>
           </div>
@@ -257,10 +257,10 @@ function App() {
               <img 
                 src={comicFrames[7].image} 
                 alt="Frame 8" 
-                className="w-full aspect-[2/1] object-cover rounded-lg shadow-lg border-2 border-[#4a00e0]/20"
+                className="w-full aspect-[2/1] object-cover rounded-lg shadow-lg border-2 border-[#d4a373]/20"
               />
-              <div className="absolute bottom-2 right-2 bg-[#4a00e0] p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <Volume2 className="w-4 h-4" />
+              <div className="absolute bottom-2 right-2 bg-[#d4a373] p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <Volume2 className="w-4 h-4 text-white" />
               </div>
             </div>
           </div>
@@ -268,26 +268,26 @@ function App() {
       </div>
 
       {/* Team Section */}
-      <div className="bg-[#16162a] py-16">
+      <div className="bg-[#fefae0] py-16">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-[#4a00e0] to-[#8e2de2]">
+          <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-[#d4a373] to-[#a98467]">
             Наша Команда
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {teamMembers.map((member, index) => (
-              <div key={index} className="bg-[#1a1a2e] rounded-xl p-6 transform transition-all duration-300 hover:scale-105 hover:-translate-y-2 border border-[#4a00e0]/20">
+              <div key={index} className="bg-white rounded-xl p-6 transform transition-all duration-300 hover:scale-105 hover:-translate-y-2 border border-[#d4a373]/20">
                 <div className="text-center mb-4">
-                  <h3 className="text-xl font-semibold text-white mb-1">{member.name}</h3>
-                  <p className="text-[#8e2de2]">{member.role}</p>
+                  <h3 className="text-xl font-semibold text-[#2c1810] mb-1">{member.name}</h3>
+                  <p className="text-[#a98467]">{member.role}</p>
                 </div>
                 <div className="flex justify-center space-x-4">
-                  <a href={`mailto:${member.email}`} className="text-gray-400 hover:text-[#8e2de2] transition-colors">
+                  <a href={`mailto:${member.email}`} className="text-gray-400 hover:text-[#d4a373] transition-colors">
                     <Mail className="w-5 h-5" />
                   </a>
-                  <a href={member.github} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#8e2de2] transition-colors">
+                  <a href={member.github} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#d4a373] transition-colors">
                     <Github className="w-5 h-5" />
                   </a>
-                  <a href={member.telegram} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#8e2de2] transition-colors">
+                  <a href={member.telegram} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#d4a373] transition-colors">
                     <span className="font-bold">t</span>
                   </a>
                 </div>
