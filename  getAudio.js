@@ -15,7 +15,6 @@ async function generateAudioFromText(text, filename = "output.mp3") {
       voice: "shimmer", // alloy, echo, fable, onyx, nova, shimmer
       input: text,
     });
-
     const buffer = Buffer.from(await mp3.arrayBuffer());
 
     const audioDir = path.join(__dirname, "audio");
