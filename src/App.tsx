@@ -17,32 +17,32 @@ interface TeamMember {
 
 const teamMembers: TeamMember[] = [
   {
-    name: "Анна Ковальчук",
-    role: "Керівник проєкту",
-    email: "anna@example.com",
-    github: "https://github.com",
-    telegram: "https://t.me/username"
+    name: "Марія Гараничева",
+    role: "Головна кіся",
+    email: "mimimashkabumazka@gmail.com",
+    github: "https://github.com/haranycheva",
+    telegram: "https://t.me/cayydann"
   },
   {
-    name: "Михайло Петренко",
-    role: "Художник",
-    email: "mykhailo@example.com",
-    github: "https://github.com",
-    telegram: "https://t.me/username"
+    name: "Ебі Спека",
+    role: "Канва ворк",
+    email: "evelinchik1987@gmail.com",
+    github: "https://github.com/EbiEEYY",
+    telegram: "https://t.me/flower_rainer"
   },
   {
-    name: "Олена Мельник",
-    role: "Розробник",
+    name: "Крамар Олег",
+    role: "Просто алег",
     email: "olena@example.com",
-    github: "https://github.com",
-    telegram: "https://t.me/username"
+    github: "https://github.com/olegoleg0080",
+    telegram: "https://t.me/MamkinDevOps"
   },
   {
-    name: "Іван Шевченко",
-    role: "Дизайнер",
-    email: "ivan@example.com",
+    name: "Бондаренко Марія",
+    role: "М'ясо",
+    email: "maryallbond@gmail.com",
     github: "https://github.com",
-    telegram: "https://t.me/username"
+    telegram: "https://t.me/RockMasha"
   }
 ];
 
@@ -50,42 +50,42 @@ const comicFrames: ComicFrame[] = [
   {
     id: 1,
     image: "https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&q=80&w=600&h=600",
-    audio: "https://assets.mixkit.co/active_storage/sfx/2568/2568.wav"
+    audio: "./audio/frame1.mp3"
   },
   {
     id: 2,
     image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=600&h=600",
-    audio: "https://assets.mixkit.co/active_storage/sfx/2569/2569.wav"
+    audio: "./audio/frame2.mp3"
   },
   {
     id: 3,
     image: "https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&q=80&w=600&h=600",
-    audio: "https://assets.mixkit.co/active_storage/sfx/2570/2570.wav"
+    audio: "./audio/frame3.mp3"
   },
   {
     id: 4,
     image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&q=80&w=600&h=600",
-    audio: "https://assets.mixkit.co/active_storage/sfx/2571/2571.wav"
+    audio: "./audio/frame4.mp3"
   },
   {
     id: 5,
     image: "https://images.unsplash.com/photo-1535378719329-f0a8b9a42152?auto=format&fit=crop&q=80&w=600&h=600",
-    audio: "https://assets.mixkit.co/active_storage/sfx/2572/2572.wav"
+    audio: "./audio/frame5.mp3"
   },
   {
     id: 6,
     image: "https://images.unsplash.com/photo-1534723328310-e82dad3ee43f?auto=format&fit=crop&q=80&w=600&h=600",
-    audio: "https://assets.mixkit.co/active_storage/sfx/2573/2573.wav"
+    audio: "./audio/frame6.mp3"
   },
   {
     id: 7,
     image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=80&w=600&h=600",
-    audio: "https://assets.mixkit.co/active_storage/sfx/2574/2574.wav"
+    audio: "./audio/frame7.mp3"
   },
   {
     id: 8,
     image: "https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&q=80&w=600&h=600",
-    audio: "https://assets.mixkit.co/active_storage/sfx/2575/2575.wav"
+    audio: "./audio/frame8.mp3"
   },
 ];
 
